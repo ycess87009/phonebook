@@ -26,3 +26,16 @@ entry *append(char lastName[], entry *e)
 
     return e;
 }
+
+void free_list(entry *e)
+{
+    if(e==NULL)return ;
+    entry *temp;
+    while(e->pNext!=NULL) {
+        temp=e;
+        e=e->pNext;
+        free(temp);
+    }
+    free(e);
+    return ;
+}

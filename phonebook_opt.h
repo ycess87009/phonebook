@@ -24,5 +24,6 @@ typedef struct __PHONE_INFO {
 
 entry *findName(char lastname[], entry *pHead);
 entry *append(char lastName[], entry *e);
+void free_list(entry *e);
 
 #endif
